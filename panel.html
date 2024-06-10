@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+     <div class="sidebar shadow">
+        <h4 class="text-center mt-3">Admin Panel</h4>
+        <a href="#" id="dashboardLink">Dashboard</a>
+        <a href="#" id="addLiftersLink">Add Lifters</a>
+    </div>
+
+    <div class="content">
+        <h2 class="text-center">Dashboard</h2>
+        <div id="maleTableContainer">
+            <h3>Male Lifters</h3>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Weight Class</th>
+                        <th scope="col">Squat Opener</th>
+                        <th scope="col">Squat Second</th>
+                        <th scope="col">Squat Last</th>
+                        <th scope="col">Bench Opener</th>
+                        <th scope="col">Bench Second</th>
+                        <th scope="col">Bench Last</th>
+                        <th scope="col">Deadlift Opener</th>
+                        <th scope="col">Deadlift Second</th>
+                        <th scope="col">Deadlift Last</th>
+                        <th scope="col">Estimated Total</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="maleTableBody">
+                </tbody>
+            </table>
+        </div>
+        <div id="femaleTableContainer">
+            <h3>Female Lifters</h3>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Weight Class</th>
+                        <th scope="col">Squat Opener</th>
+                        <th scope="col">Squat Second</th>
+                        <th scope="col">Squat Last</th>
+                        <th scope="col">Bench Opener</th>
+                        <th scope="col">Bench Second</th>
+                        <th scope="col">Bench Last</th>
+                        <th scope="col">Deadlift Opener</th>
+                        <th scope="col">Deadlift Second</th>
+                        <th scope="col">Deadlift Last</th>
+                        <th scope="col">Estimated Total</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="femaleTableBody">
+                </tbody>
+            </table>
+        </div>
+        <button id="addLifterButton" class="btn btn-danger">Add New Lifter</button>
+
+        <div id="addLifterForm" class="card">
+            <div class="card-body">
+                <h3 class="card-title">Add New Lifter</h3>
+                <form id="lifterForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="gender">Gender</label>
+                            <select class="form-control" id="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="weightClass">Weight Class</label>
+                            <select class="form-control" id="weightClass" required>
+                                <option value="">Select Weight Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="squatOpener">Squat Opener</label>
+                            <input type="number" class="form-control" id="squatOpener" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="squatSecond">Squat Second</label>
+                            <input type="number" class="form-control" id="squatSecond" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="squatLast">Squat Last</label>
+                            <input type="number" class="form-control" id="squatLast" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="benchOpener">Bench Opener</label>
+                            <input type="number" class="form-control" id="benchOpener" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="benchSecond">Bench Second</label>
+                            <input type="number" class="form-control" id="benchSecond" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="benchLast">Bench Last</label>
+                            <input type="number" class="form-control" id="benchLast" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="deadliftOpener">Deadlift Opener</label>
+                            <input type="number" class="form-control" id="deadliftOpener" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="deadliftSecond">Deadlift Second</label>
+                            <input type="number" class="form-control" id="deadliftSecond" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="deadliftLast">Deadlift Last</label>
+                            <input type="number" class="form-control" id="deadliftLast" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="panellogic.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'StrengthValley';
+    src: url('fonts/acumin-pro-extra-condensed-black.otf') format('opentype');
+}
+body {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+h6, h5, h4, h3, h2, h1 {
+    font-family: StrengthValley;
+}
+button, label, input, a, tbody, th {
+    font-family: "Roboto Mono", monospace;
+}
+.card {
+    background-color: #282828; 
+}
+.btn-red {
+    background-color: #da0000;
+    border-color: #da0000;
+}
+.btn-red:hover {
+    background-color: #cc0000; 
+    border-color: #cc0000;
+}
+.form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+.form-control::placeholder {
+    color: #aaa;
+}
+.form-control:invalid {
+    border-color: #ff0000;
+}
+.form-control:focus:invalid {
+    border-color: #ff0000;
+}
+.sidebar {
+    min-width: 200px;
+    background-color: #282828;
+    border-color: #838383;
+    color: white;
+    padding-top: 20px;
+}
+.sidebar a {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.table-dark {
+    background-color: #333;
+    color: #fff;
+}
+.table-dark th, .table-dark td {
+    border-color: #555;
+}
+.table-dark thead th {
+    background-color: #444;
+}
+#addLifterButton {
+    display: none;
+}
+#addLifterForm {
+    display: none;
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+}
+.form-group label {
+    color: #fff;
+}
